@@ -4,7 +4,7 @@ Gesture Recognition Domain Logic (MediaPipe + Geometric Rule Classifier)
 from typing import Tuple, Optional, Dict
 import cv2
 import numpy as np
-from voxx.shared.models.gesture_model import GESTURE_DICTIONARY, GestureData
+from shared.models.gesture_model import GESTURE_DICTIONARY, GestureData
 
 
 class GestureDetector:

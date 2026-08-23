@@ -9,7 +9,7 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from voxx.shared.services.pose_hand_service import normalize_landmarks, LandmarkBuffer
+from shared.services.pose_hand_service import normalize_landmarks, LandmarkBuffer
 
 
 class TestLandmarkNormalization(unittest.TestCase):

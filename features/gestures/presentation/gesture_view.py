@@ -2,10 +2,10 @@
 Presentation layer for Gesture Recognition feature screen
 """
 import streamlit as st
-from voxx.features.gestures.domain.gesture_detector import GestureDetector
-from voxx.shared.services.camera_service import CameraService
-from voxx.core.session import add_gesture_to_history
-from voxx.shared.models.gesture_model import GESTURE_DICTIONARY
+from features.gestures.domain.gesture_detector import GestureDetector
+from shared.services.camera_service import CameraService
+from core.session import add_gesture_to_history
+from shared.models.gesture_model import GESTURE_DICTIONARY
 
 
 def render_gestures_screen():

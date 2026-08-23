@@ -1,11 +1,19 @@
 """
 VoxX - Page 5: Универсальный
 """
+import sys
+from pathlib import Path
+
+# Ensure root package resolution
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
-from voxx.core.session import init_session_state
-from voxx.core.theme import apply_custom_css
-from voxx.shared.components.header import render_app_header
-from voxx.features.universal.presentation.universal_view import render_universal_screen
+from core.session import init_session_state
+from core.theme import apply_custom_css
+from shared.components.header import render_app_header
+from features.universal.presentation.universal_view import render_universal_screen
 
 st.set_page_config(
     page_title="VoxX — Универсальный Коммуникатор",

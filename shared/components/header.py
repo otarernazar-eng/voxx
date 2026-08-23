@@ -3,7 +3,7 @@ Header Component for VoxX App
 Renders accessible header banner and top controls.
 """
 import streamlit as st
-from voxx.core.config import APP_NAME, APP_SLOGAN
+from core.config import APP_NAME, APP_SLOGAN
 
 
 def render_app_header(title_suffix: str = "", icon: str = "🤟"):

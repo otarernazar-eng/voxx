@@ -3,7 +3,7 @@ VoxX Session State Management
 Centralized state initialization and state helper functions for Streamlit.
 """
 import streamlit as st
-from voxx.core.config import AccessibilityDefaults, APP_NAME
+from core.config import AccessibilityDefaults, APP_NAME
 
 
 def init_session_state():

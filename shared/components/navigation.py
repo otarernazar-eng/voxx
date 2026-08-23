@@ -2,7 +2,7 @@
 Navigation helper component for quick links and status bar
 """
 import streamlit as st
-from voxx.core.config import NAV_ITEMS
+from core.config import NAV_ITEMS
 
 
 def render_quick_nav():

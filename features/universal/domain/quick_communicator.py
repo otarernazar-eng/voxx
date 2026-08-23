@@ -2,7 +2,7 @@
 AAC Quick Communication & Emergency Domain Model Manager
 """
 from typing import List
-from voxx.shared.models.phrase_model import AACPhrase
+from shared.models.phrase_model import AACPhrase
 
 
 class QuickCommunicator:

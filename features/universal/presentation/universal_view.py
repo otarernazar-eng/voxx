@@ -2,9 +2,9 @@
 Presentation layer for Universal Communication (AAC & SOS matrix)
 """
 import streamlit as st
-from voxx.features.universal.domain.quick_communicator import QuickCommunicator
-from voxx.shared.services.tts_service import TTSService
-from voxx.core.utils import trigger_haptic_feedback
+from features.universal.domain.quick_communicator import QuickCommunicator
+from shared.services.tts_service import TTSService
+from core.utils import trigger_haptic_feedback
 
 
 def render_universal_screen():
@@ -23,7 +23,7 @@ def render_universal_screen():
     if st.button("🆘 МГНОВЕННЫЙ СИГНАЛ SOS / ВЫЗОВ ПОМОЩИ", key="btn_sos_main", type="primary"):
         st.session_state.emergency_sos_active = True
         trigger_haptic_feedback()
-        tts.speak("Внимание! Требуется срочная помощь!", rate=160)
+        tts.speak("Внимание! Требуется срочная помощь!")
 
     if st.session_state.get("emergency_sos_active", False):
         st.error("🚨 СИГНАЛ ТРЕВОГИ АКТИВИРОВАН! Голосовое оповещение и вибросигнал запущены.")
@@ -54,7 +54,7 @@ def render_universal_screen():
             )
             if st.button(f"🔊 Произнести: {p.text}", key=f"btn_phrase_{p.id}"):
                 st.session_state.last_spoken_phrase = p.text
-                tts.speak(p.text, rate=st.session_state.get("tts_speed", 150))
+                tts.speak(p.text)
                 trigger_haptic_feedback()
 
     # Add custom phrase option
