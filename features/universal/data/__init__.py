@@ -1,0 +1,3 @@
+"""
+Universal data package init
+"""

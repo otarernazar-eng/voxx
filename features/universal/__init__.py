@@ -1,0 +1,3 @@
+"""
+Universal module init
+"""

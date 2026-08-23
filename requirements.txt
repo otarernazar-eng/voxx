@@ -1,0 +1,10 @@
+streamlit>=1.38.0
+streamlit-webrtc
+mediapipe
+opencv-python-headless
+numpy
+Pillow
+pyttsx3
+SpeechRecognition
+vosk
+av

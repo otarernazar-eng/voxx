@@ -1,0 +1,3 @@
+"""
+Hearing module init
+"""
