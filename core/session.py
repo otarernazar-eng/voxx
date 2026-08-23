@@ -2,6 +2,7 @@
 VoxX Session State Management
 Centralized state initialization and state helper functions for Streamlit.
 """
+import time
 import streamlit as st
 from core.config import AccessibilityDefaults, APP_NAME
 
@@ -52,6 +53,24 @@ def init_session_state():
     for key, val in defaults.items():
         if key not in st.session_state:
             st.session_state[key] = val
+
+
+def add_gesture_to_history(gesture_name: str, confidence: float = 0.0) -> None:
+    """Record detected gesture into session history list."""
+    if "gesture_history" not in st.session_state:
+        st.session_state["gesture_history"] = []
+    
+    st.session_state["last_detected_gesture"] = gesture_name
+    st.session_state["gesture_confidence"] = confidence
+    
+    st.session_state["gesture_history"].append({
+        "name": gesture_name,
+        "confidence": confidence,
+        "timestamp": time.time()
+    })
+    # Keep last 50 items
+    if len(st.session_state["gesture_history"]) > 50:
+        st.session_state["gesture_history"] = st.session_state["gesture_history"][-50:]
 
 
 def reset_accessibility_settings():
